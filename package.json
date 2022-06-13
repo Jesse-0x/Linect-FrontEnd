@@ -2,11 +2,16 @@
   "name": "front",
   "version": "0.1.0",
   "private": true,
+  "description": "The Front end For Linect, using Node.js, Vue.js, Tailwind and more!",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "keywords": [
+    "Linect",
+    "FrontEnd"
+  ],
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.2.13"
