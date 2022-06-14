@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="760px" height="350px" viewBox="0 0 760 350" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>画板</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="SFCompactRounded-Regular, SF Compact Rounded" font-size="281">
+        <g id="画板" fill="#000000">
+            <text id="Linect">
+                <tspan x="0" y="268">Linect</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
