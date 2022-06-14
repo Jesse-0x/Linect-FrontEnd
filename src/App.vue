@@ -1,13 +1,13 @@
 <template>
   <page-header></page-header>
-  <hello-world msg="test"></hello-world>
+<!--  <hello-world msg="test"></hello-world>-->
   <page-footer></page-footer>
 </template>
 
 <script>
 import PageHeader from './components/Header'
 import PageFooter from "@/components/Footer";
-import HelloWorld from "@/components/HelloWorld";
+// import HelloWorld from "@/components/HelloWorld";
 //import MainPage from './components/main.vue'
 const c = '页面加载于 ' + new Date().toLocaleString()
 console.log(c);
@@ -16,7 +16,7 @@ export default {
   name: 'App',
   components: {
     PageFooter,
-    HelloWorld,
+    // HelloWorld,
     PageHeader,
     //MainPage,
   },
