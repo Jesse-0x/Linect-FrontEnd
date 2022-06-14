@@ -1,5 +1,5 @@
 <template>
-  <div class="flex fixed items-center right-0 left-0 h-14 rounded-b-2xl shadow-md lg:mx-0 bg-green-50/80 ">
+  <div class="flex fixed items-center right-0 left-0 h-14 rounded-b-2xl shadow-lg lg:mx-0 bg-green-50/80 shadow-green-500/20">
 
     <!-- Main Icon -->
     <a href="/" class="flex-none items-center space-x-1 p-1 ml-4">
