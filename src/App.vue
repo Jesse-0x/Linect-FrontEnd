@@ -4,6 +4,7 @@
   <page-footer></page-footer>
 </template>
 
+<!--Think about add router-->
 <script>
 import PageHeader from './components/Header'
 import PageFooter from "@/components/Footer";

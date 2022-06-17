@@ -3,7 +3,7 @@
 
     <!-- Main Icon -->
     <a href="/" class="flex-none items-center space-x-1 p-1 ml-4">
-      <img src="/image/TMP_ICON.png" class="h-12 w-12" alt="Linect Icon">
+      <img src="../assets/TMP_ICON.png" class="h-12 w-12" alt="Linect Icon">
     </a>
     <span class="flex-1 text-2xl font-mono indent-1 tracking-wide ">Linect</span>
 

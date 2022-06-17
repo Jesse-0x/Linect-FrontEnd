@@ -2,7 +2,7 @@
   <div class="absolute flex items-center bottom-0 right-0 left-0 h-14 rounded-t-2xl shadow-inner shadow-green-200/50 lg:mx-0 bg-green-50/80 ">
     <!-- Main Icon -->
     <a href="/" class="flex-none items-center space-x-1 p-1 ml-4">
-      <img src="/image/TMP_ICON.png" class="h-12 w-12" alt="Linect Icon">
+      <img src="../assets/TMP_ICON.png" class="h-12 w-12" alt="Linect Icon">
     </a>
     <span class="flex-1 text-2xl font-mono indent-1 tracking-wide "></span>
 

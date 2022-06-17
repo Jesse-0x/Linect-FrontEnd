@@ -1,13 +1,14 @@
 <template>
   <div>
-    <p> {{ msg() }}</p>
-    <button v-on:click="reverseMessage">反转 Message</button>
+    <intro-snap></intro-snap>
   </div>
 </template>
 
 <script>
+import IntroSnap from "@/components/Home/IntroSnap";
 export default {
   name: "MainPage",
+  components: {IntroSnap},
   props: {
     msg: String
   }
