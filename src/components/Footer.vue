@@ -10,14 +10,15 @@
     <div class="flex absolute ml-24 hidden items-center lg:flex sm:visible mr-20 md:visible">
       <nav class="text-sm font-bold leading-6 text-slate-700 dark:text-slate-200">
         <ul class="flex space-x-8">
-          <li><a class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" href="/">Home</a></li>
-          <li><a class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" href="/applications">Applications</a></li>
-          <li><a class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" href="/requests">Requests</a></li>
-          <li><a class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" href="/forums">Forums</a></li>
-          <li><a class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" href="/update">Update</a></li>
-          <li><a class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" href="/about">About</a></li>
-          <li><a class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" href="/developers">Developers</a></li>
-          <li><a class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" href="/business">Business</a></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/">Home</router-link></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/applications">Applications</router-link></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/requests">Requests</router-link></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/forums">Forums</router-link></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/update">Update</router-link></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/about">About</router-link></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/developers">Developers</router-link></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/business">Business</router-link></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/test" >Test</router-link></li>
         </ul>
       </nav>
     </div>

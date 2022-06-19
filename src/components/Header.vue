@@ -11,11 +11,11 @@
     <div class="flex absolute left-48 ml-auto hidden items-center lg:flex sm:visible mr-3 ">
       <nav class="text-sm font-bold leading-6 text-slate-700 dark:text-slate-200">
         <ul class="flex space-x-8">
-          <li><a class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" href="/">Home</a></li>
-          <li><a class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" href="/applications">Applications</a></li>
-          <li><a class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" href="/requests">Requests</a></li>
-          <li><a class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" href="/forums">Forums</a></li>
-          <li><a class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" href="/supports">Supports</a></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/">Home</router-link></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/applications">Applications</router-link></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/requests">Requests</router-link></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/forums">Forums</router-link></li>
+          <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/supports">Supports</router-link></li>
         </ul>
       </nav>
     </div>
