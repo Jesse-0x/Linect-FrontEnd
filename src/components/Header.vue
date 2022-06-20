@@ -1,16 +1,16 @@
 <template>
-  <div class="flex fixed items-center right-0 left-0 h-14 rounded-b-2xl shadow-lg lg:mx-0 bg-green-50/80 shadow-green-500/20">
+  <div class="flex fixed items-center right-0 left-0 h-14 rounded-b-2xl shadow-lg lg:mx-0 bg-green-50/80 shadow-green-500/20 ">
 
     <!-- Main Icon -->
-    <a href="/" class="flex-none items-center space-x-1 p-1 ml-4">
+    <router-link to="/" class="flex-none items-center space-x-1 p-1 ml-4">
       <img src="../assets/TMP_ICON.png" class="h-12 w-12" alt="Linect Icon">
-    </a>
+    </router-link>
     <span class="flex-1 text-2xl font-mono indent-1 tracking-wide ">Linect</span>
 
     <!--Menus-->
-    <div class="flex absolute left-48 ml-auto hidden items-center lg:flex sm:visible mr-3 ">
-      <nav class="text-sm font-bold leading-6 text-slate-700 dark:text-slate-200">
-        <ul class="flex space-x-8">
+    <div class="flex absolute left-48 ml-auto invisible items-center lg:flex sm:visible mr-3 ">
+      <nav class="text-sm font-bold leading-6 text-gray-700 dark:text-gray-200">
+        <ul class="flex space-x-8 text-gray-700">
           <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/">Home</router-link></li>
           <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/applications">Applications</router-link></li>
           <li><router-link class="hover:text-green-500 dark:hover:text-green-400 transition ease-in-out" to="/requests">Requests</router-link></li>
@@ -21,24 +21,20 @@
     </div>
 
     <!--News-->
-    <a  v-if="!visiable"
+    <router-link  v-if="visible"
         class="ml-3 mr-5 hidden overflow-hidden items-center rounded-full bg-green-100 py-1 px-5 text-xs font-medium leading-5 text-green-600 hover:bg-green-400/20 dark:text-green-400 xl:flex lg:visible transition ease-in-out transform transition-all duration-300"
-        v-bind:class="wouldchage2"
-        data-replace='{"-translate-x-12":"translate-x-0" }'
-        href="/update">
+        to="/update">
       <strong class="font-bold">Linect 1.0</strong>
       <svg width="2" height="2" fill="currentColor" aria-hidden="true" class="ml-2 text-green-600 dark:text-green-50">
         <circle cx="1" cy="1" r="1"></circle>
       </svg>
       <span class="ml-2">New support to the user requests</span>
-      <svg width="3" height="6" class="ml-3 overflow-visible text-green-300 dark:text-sky-400" aria-hidden="true"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-    </a>
+      <svg width="3" height="6" class="ml-3 overflow-visible text-green-300 dark:text-green-400" aria-hidden="true"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </router-link>
 
     <!--Search Bar-->
-    <label v-if="visiable"
-           class="relative block right-10 lg:visible invisible transform transition-all duration-300"
-           v-bind:class="wouldchage"
-           data-replace='{"-translate-x-12":"translate-x-0" }'>
+    <label v-if="!visible"
+           class="relative block right-10 lg:visible invisible transform transition-all duration-300">
       <span class="sr-only">Search</span>
       <span class="absolute inset-y-0 right-0 flex items-center pr-3">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-slate-100" fill="none" viewBox="0 0 20 20" stroke="currentColor" stroke-width="2">
@@ -49,87 +45,25 @@
     </label>
 
     <!-- Login Button -->
-    <a class="flex-none right-0 mr-2 w-24 py-2 rounded-full border-0 bg-green-100 text-sm text-center font-semibold text-green-600 hover:bg-green-200 transition ease-in-out" href="/registrations">Sign up</a>
-    <a class="flex-none right-0 mr-6 w-14 py-2 rounded-full border-0 text-sm text-center font-semibold text-green-600 hover:text-green-700" href="/login">Login</a>
+    <router-link class="flex-none right-0 mr-2 w-24 py-2 rounded-full border-0 invisible md:visible bg-green-100 text-sm text-center font-semibold text-green-600 hover:bg-green-200 transition ease-in-out" to="/registrations">Sign up</router-link>
+    <router-link class="flex-none right-0 mr-6 w-14 py-2 rounded-full border-0 invisible md:visible text-sm text-center font-semibold text-green-600 hover:text-green-700" to="/login">Login</router-link>
+
+    <!--  Design for iPhone viewing  -->
+    <div class="absolute flex right-0 bg-green-700 h-10 w-10 mr-4 visible md:hidden">
+
+    </div>
   </div>
 </template>
 
 <script>
-function visiable(){
-  return window.location.pathname === '/applications'
-      | window.location.pathname === '/forums'
-      | window.location.pathname === '/requests'
-}
-function vis(abb){
-  console.log(abb)
-  return !(abb.includes('/applications')
-          || abb.includes('/forums')
-          || abb.includes('/requests'))
-}
 export default {
   name: "PageHeader",
-  computed:{
-    visiable: function(){
-      return visiable()
-    },
-    //High maintenance costs XDDDDD
-    //When
-    wouldchage: function(){
-      if(visiable() && vis(document.referrer)){
-        var rt = true;
-      }else{
-        rt = false;
-      }
-      return{
-        '-translate-x-12': rt
-      }
-    },
-    wouldchage2: function(){
-      if(!visiable() && !vis(document.referrer)){
-        var rt = true;
-      }else{
-        rt = false;
-      }
-      return{
-        '-translate-x-12': rt
-      }
-    }
+  props: {
+    visible: Boolean
   }
 }
-
-function doit() {
-  var replaced = document.querySelectorAll('[data-replace]');
-  for (var i = 0; i < replaced.length; i++) {
-    let needreplace = JSON.parse(replaced[i].dataset.replace.replace(/'/g, '"'));
-    Object.keys(needreplace).forEach(function (key) {
-      replaced[i].classList.remove(key);
-      replaced[i].classList.add(needreplace[key]);
-    });
-  }
-}
-function doit2(){
-  alert(2)
-}
-//Thanks for https://tonylea.com/animating-tailwind-transitions-on-page-load
-window.onload = function(){
-  if (visiable() && vis(document.referrer)){
-    doit()
-    }
-  else if(!visiable() && !vis(document.referrer)){
-    doit()
-  }
-}
-
-window.onbeforeunload = function(){
-  console.log(2)
-  if (visiable() && vis(document.referrer)){
-    doit2()
-    }
-  else if(!visiable() && !vis(document.referrer)){
-    doit2()
-  }
-}
-
+//High maintenance costs XDDDDD
+// Ahhhhhhh NVM XDDDDDDDDDDDDDD
 </script>
 
 <style scoped>
