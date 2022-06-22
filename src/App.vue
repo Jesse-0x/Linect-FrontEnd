@@ -18,7 +18,7 @@
  import PageHeader from './components/Header'
  import PageFooter from "@/components/Footer";
  // import HelloWorld from "@/components/HelloWorld";
-//import MainPage from './components/main.vue'
+ //import MainPage from './components/main.vue'
 
 const c = '页面加载于 ' + new Date().toLocaleString()
 console.log(c);
