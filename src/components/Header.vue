@@ -21,7 +21,7 @@
     </div>
 
     <!--News-->
-    <router-link  v-if="visible"
+    <router-link  v-if="visible('news', place)"
         class="ml-3 mr-5 hidden overflow-hidden items-center rounded-full bg-green-100 py-1 px-5 text-xs font-medium leading-5 text-green-600 hover:bg-green-400/20 dark:text-green-400 xl:flex lg:visible transition ease-in-out transform transition-all duration-300"
         to="/update">
       <strong class="font-bold">Linect 1.0</strong>
@@ -33,7 +33,7 @@
     </router-link>
 
     <!--Search Bar-->
-    <label v-if="!visible"
+    <label v-if="visible('search', place)"
            class="relative block right-10 lg:visible invisible transform transition-all duration-300">
       <span class="sr-only">Search</span>
       <span class="absolute inset-y-0 right-0 flex items-center pr-3">
@@ -56,14 +56,56 @@
 </template>
 
 <script>
+
 export default {
   name: "PageHeader",
   props: {
-    visible: Boolean
+    place: String
+  },
+  computed:{
+    visible: function(part, place){
+      return visibility(part, place)
+    },
   }
+}
+
+function visibility(part, place){
+  switch (part){
+    case "news":
+      switch (place){
+        case "Home": return true
+        case "Applications": return false
+        case "Requests": return false
+        case "Forums": return false
+        case "Update": return true
+        case "About": return true
+        case "Developers": return true
+        case "Supports": return false
+        case "Login": return false
+        case "Registrations": return true
+        case "Business": return false
+      }
+      break
+    case "search":
+      switch (place){
+        case "Home": return false
+        case "Applications": return true
+        case "Requests": return true
+        case "Forums": return true
+        case "Update": return false
+        case "About": return false
+        case "Developers": return false
+        case "Supports": return true
+        case "Login": return false
+        case "Registrations": return false
+        case "Business": return false
+      }
+  }
+  return false;
 }
 //High maintenance costs XDDDDD
 // Ahhhhhhh NVM XDDDDDDDDDDDDDD
+// Okay again... High Maintenance cost XD - Jun 25 3:28PM
 </script>
 
 <style scoped>
