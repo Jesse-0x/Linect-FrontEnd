@@ -1,6 +1,6 @@
 <template>
   <div class="relative top-0 h-14"></div>
-  <div class="flex top-0 fixed items-center right-0 left-0 h-14 rounded-b-2xl shadow-lg lg:mx-0 bg-green-50/80 shadow-green-500/20 ">
+  <div class="flex top-0 fixed items-center right-0 left-0 h-12 rounded-b-2xl shadow-lg lg:mx-0 bg-green-50/75 shadow-green-500/20 ">
 
     <!-- Main Icon -->
     <router-link to="/" class="flex-none items-center space-x-1 p-1 ml-4">
