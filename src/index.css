@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
+
+.snaps {
+    @apply shrink-0 w-[160] h-80 rounded-xl shadow-xl bg-white
+}
+.snap_top{
+    @apply relative snap-center shrink-0 top-5
+}
 @tailwind utilities;
+

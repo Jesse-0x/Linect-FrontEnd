@@ -1,6 +1,7 @@
 import App from './App'
 
 // import Test from './components/Test/HelloWorld.vue'
+import Home from './components/Home/main.vue'
 import Applications from './components/Test/HelloWorld.vue'
 import Requests from './components/Test/HelloWorld.vue'
 import Forums from './components/Test/HelloWorld.vue'
@@ -16,6 +17,10 @@ export default [{
     path: '/',
     component: App,
     children:[
+        {
+            path:'/',
+            component: Home
+        },
         {
             path: '/test',
             component: HelloWorld
