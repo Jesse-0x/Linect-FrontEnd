@@ -6,7 +6,7 @@
     <router-link to="/" class="flex-none items-center space-x-1 p-1 ml-4">
       <img src="../assets/TMP_ICON.png" class="h-12 w-12" alt="Linect Icon">
     </router-link>
-    <span class="flex-1 text-2xl font-mono indent-1 tracking-wide ">Linect</span>
+    <span class="flex-1 text-2xl font-mono indent-1  ">Linect</span>
 
     <!--Menus-->
     <div class="flex absolute left-48 ml-auto invisible items-center lg:flex sm:visible mr-3 ">
@@ -49,7 +49,7 @@
     <router-link v-if="signup" class="flex-none right-0 mr-2 w-24 py-2 rounded-full border-0 invisible md:visible bg-green-100 text-sm text-center font-semibold text-green-600 hover:bg-green-200 transition ease-in-out" to="/registrations">Sign up</router-link>
     <router-link v-if="signup" class="flex-none right-0 mr-6 w-14 py-2 rounded-full border-0 invisible md:visible text-sm text-center font-semibold text-green-600 hover:text-green-700" to="/login">Login</router-link>
 
-    <!--  Design for iPhone viewing  -->
+    <!--  Design for Phone viewing  -->
     <div class="absolute flex right-0 bg-green-700 h-10 w-10 mr-4 visible md:hidden">
 
     </div>
