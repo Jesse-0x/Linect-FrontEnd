@@ -1,6 +1,6 @@
 import App from './App'
 
-import Test from './components/Test/HelloWorld.vue'
+// import Test from './components/Test/HelloWorld.vue'
 import Applications from './components/Test/HelloWorld.vue'
 import Requests from './components/Test/HelloWorld.vue'
 import Forums from './components/Test/HelloWorld.vue'
@@ -10,6 +10,7 @@ import Developers from './components/Test/HelloWorld.vue'
 import Supports from './components/Test/HelloWorld.vue'
 import Login from './components/Test/HelloWorld.vue'
 import Registrations from './components/Test/HelloWorld.vue'
+import HelloWorld from "@/components/Test/HelloWorld";
 
 export default [{
     path: '/',
@@ -17,7 +18,7 @@ export default [{
     children:[
         {
             path: '/test',
-            component: Test
+            component: HelloWorld
         },
         {
             path: '/Applications',

@@ -1,5 +1,6 @@
 <template>
-  <div class="flex fixed items-center right-0 left-0 h-14 rounded-b-2xl shadow-lg lg:mx-0 bg-green-50/80 shadow-green-500/20 ">
+  <div class="relative top-0 h-14"></div>
+  <div class="flex top-0 fixed items-center right-0 left-0 h-14 rounded-b-2xl shadow-lg lg:mx-0 bg-green-50/80 shadow-green-500/20 ">
 
     <!-- Main Icon -->
     <router-link to="/" class="flex-none items-center space-x-1 p-1 ml-4">
@@ -21,7 +22,7 @@
     </div>
 
     <!--News-->
-    <router-link  v-if="visible('news', place)"
+    <router-link  v-if="news"
         class="ml-3 mr-5 hidden overflow-hidden items-center rounded-full bg-green-100 py-1 px-5 text-xs font-medium leading-5 text-green-600 hover:bg-green-400/20 dark:text-green-400 xl:flex lg:visible transition ease-in-out transform transition-all duration-300"
         to="/update">
       <strong class="font-bold">Linect 1.0</strong>
@@ -33,7 +34,7 @@
     </router-link>
 
     <!--Search Bar-->
-    <label v-if="visible('search', place)"
+    <label v-if="search"
            class="relative block right-10 lg:visible invisible transform transition-all duration-300">
       <span class="sr-only">Search</span>
       <span class="absolute inset-y-0 right-0 flex items-center pr-3">
@@ -45,8 +46,8 @@
     </label>
 
     <!-- Login Button -->
-    <router-link class="flex-none right-0 mr-2 w-24 py-2 rounded-full border-0 invisible md:visible bg-green-100 text-sm text-center font-semibold text-green-600 hover:bg-green-200 transition ease-in-out" to="/registrations">Sign up</router-link>
-    <router-link class="flex-none right-0 mr-6 w-14 py-2 rounded-full border-0 invisible md:visible text-sm text-center font-semibold text-green-600 hover:text-green-700" to="/login">Login</router-link>
+    <router-link v-if="signup" class="flex-none right-0 mr-2 w-24 py-2 rounded-full border-0 invisible md:visible bg-green-100 text-sm text-center font-semibold text-green-600 hover:bg-green-200 transition ease-in-out" to="/registrations">Sign up</router-link>
+    <router-link v-if="signup" class="flex-none right-0 mr-6 w-14 py-2 rounded-full border-0 invisible md:visible text-sm text-center font-semibold text-green-600 hover:text-green-700" to="/login">Login</router-link>
 
     <!--  Design for iPhone viewing  -->
     <div class="absolute flex right-0 bg-green-700 h-10 w-10 mr-4 visible md:hidden">
@@ -60,53 +61,26 @@
 export default {
   name: "PageHeader",
   props: {
-    place: String
-  },
-  computed:{
-    visible: function(part, place){
-      return visibility(part, place)
+    signup:{
+      type: Boolean,
+      default: true
     },
-  }
+    search: {
+      type: Boolean,
+      default: true
+    },
+    news: {
+      type: Boolean,
+      default: true
+    }
+  },
 }
 
-function visibility(part, place){
-  switch (part){
-    case "news":
-      switch (place){
-        case "Home": return true
-        case "Applications": return false
-        case "Requests": return false
-        case "Forums": return false
-        case "Update": return true
-        case "About": return true
-        case "Developers": return true
-        case "Supports": return false
-        case "Login": return false
-        case "Registrations": return true
-        case "Business": return false
-      }
-      break
-    case "search":
-      switch (place){
-        case "Home": return false
-        case "Applications": return true
-        case "Requests": return true
-        case "Forums": return true
-        case "Update": return false
-        case "About": return false
-        case "Developers": return false
-        case "Supports": return true
-        case "Login": return false
-        case "Registrations": return false
-        case "Business": return false
-      }
-  }
-  return false;
-}
 //High maintenance costs XDDDDD
 // Ahhhhhhh NVM XDDDDDDDDDDDDDD
 // Okay again... High Maintenance cost XD - Jun 25 3:28PM
-// Yea very High.... Can't resolve the problem right now......
+// Yea very High.... Can't resolve the problem right now...... - Jun 25 7:39PM
+// Okay this time will be the last time.... I promise... - June 25 8:10PM
 </script>
 
 <style scoped>

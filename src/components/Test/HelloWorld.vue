@@ -1,5 +1,5 @@
 <template>
-  <page-header place="Test"></page-header>
+  <page-header :signup="true" :search="false" :news="true"></page-header>
   <div>
   <div class="hello">
     <h1>{{ msg }}</h1>

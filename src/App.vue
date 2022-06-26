@@ -1,5 +1,4 @@
 <template>
-  <page-header></page-header>
   <div>
     <router-view v-if="keepAlive" v-slot="{ Component }" >
         <transition name="router-fade" mode="out-in">
@@ -11,7 +10,6 @@
         </transition>
       </router-view>
   </div>
-  <page-footer></page-footer>
 </template>
 
 <script>
