@@ -1,4 +1,5 @@
 <template>
+  <page-header place="Test"></page-header>
   <div>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -204,11 +205,15 @@
     </ul>
   </div>
   </div>
+  <page-footer></page-footer>
 </template>
 
 <script>
+import PageHeader from "@/components/Header";
+import PageFooter from "@/components/Footer";
 export default {
   name: 'HelloWorld',
+  components: {PageFooter, PageHeader},
   props: {
     msg: String
   }

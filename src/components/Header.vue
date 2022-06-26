@@ -106,6 +106,7 @@ function visibility(part, place){
 //High maintenance costs XDDDDD
 // Ahhhhhhh NVM XDDDDDDDDDDDDDD
 // Okay again... High Maintenance cost XD - Jun 25 3:28PM
+// Yea very High.... Can't resolve the problem right now......
 </script>
 
 <style scoped>
