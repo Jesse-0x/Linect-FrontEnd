@@ -81,6 +81,7 @@ export default {
 // Okay again... High Maintenance cost XD - Jun 25 3:28PM
 // Yea very High.... Can't resolve the problem right now...... - Jun 25 7:39PM
 // Okay this time will be the last time.... I promise... - June 25 8:10PM
+// Yea now everything is working well right now. - June 25 9:22PM
 </script>
 
 <style scoped>
