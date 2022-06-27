@@ -16,8 +16,8 @@
     <div class="snap_top bg-gradient-to-br from-[#d9f7a8] to-[#a8f7c2]"></div>
     <div class="snap_top bg-gradient-to-br from-[#79fca2] to-[#79fcdb] "></div>
 
-    <!--    e0c3fc→#8ec5fc-->
 
+    <!--    e0c3fc→#8ec5fc-->
     <div class="snap-center shrink-0">
       <div class="shrink-0 w-4 sm:w-48"></div>
     </div>

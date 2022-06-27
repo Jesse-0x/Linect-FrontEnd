@@ -14,7 +14,6 @@
   ],
   "dependencies": {
     "core-js": "^3.8.3",
-    "fullpage.js": "^4.0.9",
     "vue": "^3.2.13",
     "vue-router": "^4.0.16"
   },
