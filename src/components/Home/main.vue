@@ -6,7 +6,6 @@
   </div>
   <page-footer></page-footer>
 </template>
-
 <script>
 import IntroSnap from "@/components/Home/IntroSnap";
 import PageFooter from "@/components/Footer";
