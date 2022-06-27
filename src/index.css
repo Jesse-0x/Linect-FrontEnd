@@ -5,7 +5,7 @@
     @apply shrink-0 w-[190] h-96 rounded-xl shadow-xl
 }
 .snap_top{
-    @apply relative snap-center shrink-0 top-5 w-[48rem] h-96
+    @apply relative snap-center shrink-0 top-3 w-[48rem] h-96
     rounded-3xl
 }
 /*d4fc79*/
