@@ -1,5 +1,5 @@
 <template>
-  <div class="snap-mandatory top-10 snap-x rounded-2xl overflow-auto relative w-full flex gap-20 pb-14
+  <div class="snap-mandatory top-8 snap-x rounded-2xl overflow-auto relative w-full flex gap-20 pb-14
   ">
 <!--  bg-green-100/50">-->
     <div class="snap-center shrink-0">

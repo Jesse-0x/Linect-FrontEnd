@@ -1,6 +1,6 @@
 <template>
   <div class="relative top-0 h-14"></div>
-  <div class="flex top-0 fixed items-center right-0 left-0 h-12 rounded-b-2xl shadow-lg lg:mx-0 bg-green-50/75 shadow-green-500/20 ">
+  <div class="flex top-0 fixed items-center right-0 left-0 h-12 rounded-b-3xl shadow-lg lg:mx-0 bg-green-50/75 shadow-green-200/25 ">
 
     <!-- Main Icon -->
     <router-link to="/" class="flex-none items-center space-x-1 p-1 ml-4">
@@ -47,7 +47,7 @@
 
     <!-- Login Button -->
     <router-link v-if="signup" class="flex-none right-0 mr-2 w-24 py-2 rounded-full border-0 invisible md:visible bg-green-100 text-sm text-center font-semibold text-green-600 hover:bg-green-200 transition ease-in-out" to="/registrations">Sign up</router-link>
-    <router-link v-if="signup" class="flex-none right-0 mr-6 w-14 py-2 rounded-full border-0 invisible md:visible text-sm text-center font-semibold text-green-600 hover:text-green-700" to="/login">Login</router-link>
+    <router-link v-if="signup" class="flex-none right-0 mr-7 w-14 py-2 rounded-full border-0 invisible md:visible text-sm text-center font-semibold text-green-600 hover:text-green-700" to="/login">Login</router-link>
 
     <!--  Design for Phone viewing  -->
     <div class="absolute flex right-0 bg-green-700 h-10 w-10 mr-4 visible md:hidden">
@@ -82,6 +82,9 @@ export default {
 // Yea very High.... Can't resolve the problem right now...... - Jun 25 7:39PM
 // Okay this time will be the last time.... I promise... - June 25 8:10PM
 // Yea now everything is working well right now. - June 25 9:22PM
+// pretty good. XDDDDD Not really thought I probably not a very good front end developer...  - June 28 10:16PM
+// veryveryvery high maintenance costs.XD - June 28 10:16PM
+// Here really pretty much become one place I wrote diary XDD. - June 28 10:17PM
 </script>
 
 <style scoped>

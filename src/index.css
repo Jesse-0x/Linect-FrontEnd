@@ -7,6 +7,11 @@
 .snap_top{
     @apply relative snap-center shrink-0 top-3 w-[48rem] h-96 rounded-3xl
 }
+.main_snap_box{
+    @apply relative flex w-52 h-20 ml-10 mr-10
+    items-center overflow-auto
+    bg-gradient-to-b
+}
 /*d4fc79*/
 /*96e6a1*/
 @tailwind utilities;
