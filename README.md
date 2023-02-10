@@ -1,5 +1,7 @@
-# linc
+# Linect
 
+Yep, this is the front end for Linect.
+YaY! Version three for the front end (QwQ).
 ## Project setup
 ```
 yarn install
