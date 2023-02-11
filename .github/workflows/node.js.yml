@@ -38,8 +38,8 @@ jobs:
         git add .
         git commit -a -m "Add changes"
         git remote add origin https://github.com/Jesse-0x/Linect-FrontEnd.git
-        git branch -m master
-        git push origin master:dist --force
+        git checkout -b dist
+        git push -u origin dist --force
         git 
         
     - name: Push changes
