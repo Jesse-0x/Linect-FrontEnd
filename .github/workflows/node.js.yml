@@ -17,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -30,3 +30,18 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    - name: Commit dist
+      run: |
+        cd dist
+        git init
+        git config --local user.name "github-actions[bot]"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git commit -a -m "Add changes"
+        git branch --set-upstream-to https://github.com/Jesse-0x/Linect-FrontEnd dist
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: dist
+        force: true
