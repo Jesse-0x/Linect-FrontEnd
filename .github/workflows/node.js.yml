@@ -35,9 +35,9 @@ jobs:
         git init
         git config --local user.name "github-actions[bot]"
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git remote add origin https://github.com/Jesse-0x/Linect-FrontEnd
         git add .
         git commit -a -m "Add changes"
+        git remote add origin https://github.com/Jesse-0x/Linect-FrontEnd
         git push origin master:dist --force
         git 
         
