@@ -32,7 +32,7 @@ jobs:
     - name: Commit dist
       run: |
         rm -rf $(ls | egrep -v dist)
-        rm -rf .git
+        rm -rf .*
         cp -R ./dist/* ./
         git init
         git config --local user.name "github-actions[bot]"
