@@ -31,8 +31,7 @@ jobs:
     - run: npm run build --if-present
     - name: Commit dist
       run: |
-        rm -rf $(ls | egrep -v dist)
-        rm -rf .*
+        rm -rf $(ls -A | egrep -v dist)
         cp -R ./dist/* ./
         git init
         git config --local user.name "github-actions[bot]"
