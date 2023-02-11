@@ -33,7 +33,7 @@ jobs:
       run: |
         rm -rf $(ls | egrep -v dist)
         rm -rf .git
-        cp ./dist/* ./
+        cp -R ./dist/* ./
         git init
         git config --local user.name "github-actions[bot]"
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
