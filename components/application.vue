@@ -1,34 +1,34 @@
 <template>
-  <div :class="props.color" class="background">
-    <div class="title">
-      <img :src="props.icon" alt="icon"/>
+  <div :class='props.color' class='background'>
+    <div class='title'>
+      <img :src='props.icon' alt='icon'/>
       <span>{{ props.title }}</span>
     </div>
-    <div class="content">
+    <div class='content'>
       <p>{{ props.content }}</p>
     </div>
-    <div class="align-bottom">
-      <div class="align-left">
-        <a href="#">
-          <img alt="check" src="/application_icons/check.svg">
+    <div class='align-bottom'>
+      <div class='align-left'>
+        <a href='#'>
+          <img alt='check' src='/application_icons/check.svg'>
         </a>
-        <a href="#">
-          <img alt="document" src="/application_icons/document.svg">
+        <a href='#'>
+          <img alt='document' src='/application_icons/document.svg'>
         </a>
-        <a href="#">
-          <img alt="content" src="/application_icons/content.svg">
+        <a href='#'>
+          <img alt='content' src='/application_icons/content.svg'>
         </a>
       </div>
-      <div class="align-right">
-        <a href="#">
-          <img alt="share" src="/application_icons/share.svg">
+      <div class='align-right'>
+        <a href='#'>
+          <img alt='share' src='/application_icons/share.svg'>
         </a>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang='ts'>
 const props = defineProps({
   title: String,
   icon: String,
@@ -37,7 +37,7 @@ const props = defineProps({
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 .background {
   background-image: linear-gradient(134deg, rgba(212, 252, 121, 0.80) 0%, rgba(150, 230, 161, 0.80) 100%);
   box-shadow: 4px 5px 9px 0 rgba(0, 0, 0, 0.10);

@@ -1,10 +1,10 @@
 <template>
-  <NuxtLayout :name="layout">
+  <NuxtLayout :name='layout'>
     <NuxtPage/>
   </NuxtLayout>
 </template>
 
-<script lang="ts" setup>
+<script lang='ts' setup>
 const { isMobile } = useDevice()
 const layout = isMobile ? 'mobile' : 'default'
 useHead({

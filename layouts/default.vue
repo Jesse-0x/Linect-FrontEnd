@@ -2,13 +2,13 @@
   <sidebar/>
   <main>
     <searchbar/>
-    <div class="main-context">
+    <div class='main-context'>
       <slot/>
     </div>
   </main>
 </template>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 main {
   margin-left: 20%;
   padding: 3.6vh 3vw 1vw 2.5vw;

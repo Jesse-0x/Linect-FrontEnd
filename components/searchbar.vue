@@ -1,25 +1,25 @@
 <template>
-  <div class="search-bar">
-    <div class="search-icon">
-      <img alt="Search" src="/icons/search.svg">
+  <div class='search-bar'>
+    <div class='search-icon'>
+      <img alt='Search' src='/icons/search.svg'>
     </div>
-    <input type="text">
-    <div class="setting">
-      <img alt="Setting" src="/icons/setting.svg">
+    <input type='text'>
+    <div class='setting'>
+      <img alt='Setting' src='/icons/setting.svg'>
     </div>
-    <div class="history">
-      <img alt="History" src="/icons/history.svg">
+    <div class='history'>
+      <img alt='History' src='/icons/history.svg'>
     </div>
-    <div class="message">
-      <img alt="Message" src="/icons/message.svg">
+    <div class='message'>
+      <img alt='Message' src='/icons/message.svg'>
     </div>
-    <div class="user">
-      <img alt="User" src="/icons/user.svg">
+    <div class='user'>
+      <img alt='User' src='/icons/user.svg'>
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 .search-bar {
   height: 7.2vh;
   width: 74%;

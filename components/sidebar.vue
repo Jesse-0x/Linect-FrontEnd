@@ -1,55 +1,55 @@
 <template>
   <aside>
-    <div class="logo">
-      <img alt="Linect Logo" src="/icons/logo.png">
+    <div class='logo'>
+      <img alt='Linect Logo' src='/icons/logo.png'>
       <span>Linect</span>
     </div>
-    <div class="options">
-      <NuxtLink to="/" class="{ active: isDashboardActive }">
-        <img alt="Dashboard" src="/icons/dashboard.svg">
+    <div class='options'>
+      <NuxtLink to='/' class='{ active: isDashboardActive }'>
+        <img alt='Dashboard' src='/icons/dashboard.svg'>
         <span>Dashboard</span>
       </NuxtLink>
-      <NuxtLink to="/application" class="{ active: isApplicationActive }">
-        <img alt="Applications" src="/icons/applications.svg">
+      <NuxtLink to='/application' class='{ active: isApplicationActive }'>
+        <img alt='Applications' src='/icons/applications.svg'>
         <span>Applications</span>
       </NuxtLink>
-      <NuxtLink to="/request" class="{ active: isRequestActive }">
-        <img alt="Requests" src="/icons/requests.svg">
+      <NuxtLink to='/request' class='{ active: isRequestActive }'>
+        <img alt='Requests' src='/icons/requests.svg'>
         <span>Requests</span>
       </NuxtLink>
-      <NuxtLink to="/discussion" class="{ active: isDiscussionActive }">
-        <img alt="Discussion" src="/icons/discussion.svg">
+      <NuxtLink to='/discussion' class='{ active: isDiscussionActive }'>
+        <img alt='Discussion' src='/icons/discussion.svg'>
         <span>Discussion</span>
       </NuxtLink>
     </div>
-    <hr class="dividing-line">
-    <div class="align-bottom">
-      <hr class="dividing-line">
-      <div class="links">
-        <NuxtLink to="/documentation">
-          <img alt="Documentation" src="/icons/documentation.svg">
+    <hr class='dividing-line'>
+    <div class='align-bottom'>
+      <hr class='dividing-line'>
+      <div class='links'>
+        <NuxtLink to='/documentation'>
+          <img alt='Documentation' src='/icons/documentation.svg'>
         </NuxtLink>
-        <NuxtLink href="/about">
-          <img alt="About" src="/icons/info.svg">
+        <NuxtLink href='/about'>
+          <img alt='About' src='/icons/info.svg'>
         </NuxtLink>
-        <NuxtLink to="/support">
-          <img alt="Support" src="/icons/support.svg">
+        <NuxtLink to='/support'>
+          <img alt='Support' src='/icons/support.svg'>
         </NuxtLink>
-        <NuxtLink to="/share">
-          <img alt="Share" src="/icons/share.svg">
+        <NuxtLink to='/share'>
+          <img alt='Share' src='/icons/share.svg'>
         </NuxtLink>
-        <a href="mailto:linect@linect.org" target="_blank">
-          <img alt="Contact" src="/icons/contact.svg">
+        <a href='mailto:linect@linect.org' target='_blank'>
+          <img alt='Contact' src='/icons/contact.svg'>
         </a>
       </div>
-      <div class="copyright">
+      <div class='copyright'>
         <p>Linect © 2023. All right reserved</p>
       </div>
     </div>
   </aside>`
 </template>
 
-<script setup lang="ts">
+<script setup lang='ts'>
 const route = useRoute()
 const isDashboardActive = computed(() => route.path === '/')
 const isApplicationActive = computed(() => route.path === '/application')
@@ -57,7 +57,7 @@ const isRequestActive = computed(() => route.path === '/request')
 const isDiscussionActive = computed(() => route.path === '/discussion')
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 aside {
   height: 100%;
   width: 21.3%;
@@ -130,7 +130,7 @@ aside div {
 }
 
 .options a.router-link-active::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 20.9vw;
   display: inline-block;
