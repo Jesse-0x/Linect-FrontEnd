@@ -40,9 +40,11 @@
         <div class='result-info'>
           <div class='title'>
             <span class='name'>{{result.name}}</span>
-            <span class='version'>{{result.version}}</span>
-            <span class='downloads'>{{result.downloads}}</span>
-            <span class='rating'>{{result.rating}}</span>
+            <Icon name="material-symbols:download" size="1.4vw"/>
+            <span class='downloads'>{{formatter.format(result.downloads)}}</span>
+            <div class='rating'>
+              <Icon v-for="i in result.rating" name="ic:baseline-star" size="1.4vw"/>
+            </div>
           </div>
           <div class='description'>
             <p>Created time: {{result.created}}</p>
@@ -65,6 +67,11 @@ useHead({
 })
 
 const results: applicationDto[] = []
+const formatter = new Intl.NumberFormat('en', {
+  notation: 'compact',
+  compactDisplay: 'short'
+})
+
 const test: applicationDto = new applicationDto()
 test.id = 'fuck'
 test.name = 'test'
@@ -122,6 +129,9 @@ results.push(test1)
 
 fieldset {
   margin-bottom: 1vw;
+  border-color: #cdcfd5;
+  border-radius: 10px;
+  border-style: solid;
 }
 
 fieldset legend {
@@ -146,7 +156,7 @@ fieldset label input[type=checkbox] {
 .list {
   width: 75%;
   height: 100%;
-  padding-left: 25%;
+  padding-left: 24%;
 }
 
 .result-sort {
@@ -157,14 +167,17 @@ fieldset label input[type=checkbox] {
 }
 
 .result-sort p {
-  font-size: 1.6vw;
+  font-size: 1.4vw;
   margin-bottom: 0;
 }
 
 .result-sort select {
-  font-size: 1.1vw;
+  font-size: 1vw;
   padding: 0.5vw;
   margin-top: 1.5vw;
+  border: 2px solid #cdcfd5;
+  border-radius: 10px;
+  color: $text;
 }
 
 .main-down {
@@ -176,8 +189,8 @@ fieldset label input[type=checkbox] {
 .result {
   display: flex;
   padding: 1vw;
-  border: 1px solid #E1E2E6;
-  border-radius: 0.5vw;
+  border: 2px solid #cdcfd5;
+  border-radius: 10px;
   margin-bottom: 1vw;
 }
 
@@ -185,13 +198,9 @@ fieldset label input[type=checkbox] {
   margin-bottom: 0;
 }
 
-.result:hover {
-  transition: border-color 0.2s ease-in-out;
-}
-
 .result img {
-  width: 4vw;
-  height: 4vw;
+  width: 3vw;
+  height: 3vw;
   margin-right: 1vw;
 }
 
@@ -207,27 +216,27 @@ fieldset label input[type=checkbox] {
 }
 
 .title .name {
-  font-size: 1.5vw;
-  margin-right: 1vw;
-}
-
-.title .version {
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   margin-right: 1vw;
 }
 
 .title .downloads {
-  font-size: 1.2vw;
+  font-size: 1vw;
   margin-right: 1vw;
 }
 
 .title .rating {
-  font-size: 1.2vw;
+  font-size: 1vw;
   margin-right: 1vw;
+  padding-bottom: 0.1vw;
+}
+
+.rating .icon {
+  filter: invert(89%) sepia(10%) saturate(6325%) hue-rotate(360deg) brightness(106%) contrast(103%);
 }
 
 .description {
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
 }
 
@@ -238,7 +247,7 @@ fieldset label input[type=checkbox] {
 }
 
 .tags .tag {
-  font-size: 1.1vw;
+  font-size: 1vw;
   margin-right: 0.5vw;
   padding: 0.2vw 0.5vw;
   border-radius: 0.5vw;

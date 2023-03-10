@@ -21,5 +21,6 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxtjs/device',
-  ]
+    'nuxt-icon'
+  ],
 })
